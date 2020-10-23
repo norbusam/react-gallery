@@ -5,8 +5,9 @@ class GalleryList extends Component {
     render(){
         return(
             <>
-                <p>also, hello from GalleryList</p>
-                <GalleryItem/>
+                {this.props.list.map(item=>(
+                    <GalleryItem key={item.id} item={item}/>
+                ))}
             </>
         )
     }
