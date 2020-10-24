@@ -11,6 +11,6 @@ class GalleryList extends Component {
             </>
         )
     }
-}
+}// end GalleryList
 
 export default GalleryList;

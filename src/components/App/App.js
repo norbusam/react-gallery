@@ -7,11 +7,12 @@ class App extends Component {
   state = {
     album: []
   }
+  // on page load, run the function getGallery
   componentDidMount = () => {
     this.getGallery();
   }
 
-
+// GET route
   getGallery = () => {
     //GET picture from server
     axios.get('/gallery').then(response =>{
@@ -24,6 +25,7 @@ class App extends Component {
     })
   }
 
+// Put Route
   addLike = (photo) => {
     console.log('liked');
     axios({
@@ -50,6 +52,6 @@ class App extends Component {
       </div>
     );
   }
-}
+}// end App
 
 export default App;
