@@ -3,14 +3,38 @@ import './GalleryItem.css'
 
 
 class GalleryItem extends Component {
+    state = {
+        showImage: true
+    }
+
+    showImage = () => {
+        console.log('clicked', this.state.showImage);
+        
+        this.setState({
+            showImage: !this.state.showImage
+        })
+       
+    }
     render(){
         return(
             <>
-                <div className="picture">
-                       <img alt="goat" src={this.props.item.path}/> 
-                       <p>{this.props.item.description}</p> 
-                     <p>number of Likes:{this.props.item.like}</p> 
+                {this.state.showImage ?
+                <div className="picture"> 
+                       <img onClick={this.showImage} alt="goat" src={this.props.item.path}/> 
+                <br/>
+                    <p>Liks:{this.props.item.likes}</p>
+                    <br/>
+                    <button onClick={this.addLike}>Like</button>
                 </div>
+                :
+                <div className="picture"> 
+                    <p onClick={this.showImage}>{this.props.item.description}</p> 
+                     <p>Likes:{this.props.item.likes}</p> 
+                     <br/>
+                     <button onClick={this.addLike}>Like</button> 
+                </div>
+                }  
+                
             </>
         )
     }

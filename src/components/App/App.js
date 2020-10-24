@@ -22,9 +22,21 @@ class App extends Component {
     }).catch(err=>{
       console.log('error in GET', err);
     })
+  }
+
+  addLike = () => {
+    console.log('liked');
+    axios({
+        method: 'PUT',
+        url: `/gallery/like/${photoId}`,
+        data: photoId
+    }).then((response)=>{
+        console.log(response);
+        this.props.getGallery();
+    }).catch((error)=>{
+        console.log('error in put', error);
+    })
 }
-
-
 
   render() {
     return (
