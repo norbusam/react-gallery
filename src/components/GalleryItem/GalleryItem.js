@@ -23,14 +23,14 @@ class GalleryItem extends Component {
                 <div className="picture"> 
                        <img onClick={this.showImage} alt="goat" src={this.props.photo.path}/> 
                 <br/>
-                    <p>Liks:{this.props.photo.likes}</p>
+                    <p>Likes:{this.props.photo.likes}</p>
                     <br/>
                     <button onClick={()=>this.props.addLike(this.props.photo)}>Like</button>
                 </div>
                 :
                 /*or else show the image description*/
-                <div className="picture"> 
-                    <p onClick={this.showImage}>{this.props.photo.description}</p> 
+                <div className="description"> 
+                    <p id="text" onClick={this.showImage}>{this.props.photo.description}</p> 
                      <p>Likes:{this.props.photo.likes}</p> 
                      <br/>
                      <button onClick={()=>this.props.addLike(this.props.photo)}>Like</button> 
