@@ -1,22 +1,36 @@
 .picture{
-    display: inline-block;
+    /* display: inline-block;
     height: 300px;
     width: 300px;
     padding: 1.5em;
     margin-right: 1.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5em; */
     /* margin: 100px auto; */
+    flex-basis:20%; 
+    width:100%; 
+    padding:10px; 
+    margin:8px; 
+    box-shadow: 1px 1px 1px 1px green; 
+    background-color: aquamarine;
 }
 
+  
+
 .description {
-    display: inline-block;
+    /* display: inline-block;
     height: 300px;
     width: 300px;
     padding: 1.5em;
     text-align: justify;
     margin-right: 1.5em;
     margin-bottom: 1.5em;
-    background-color: whitesmoke
+    background-color: whitesmoke */
+    flex-basis:20%; 
+    width:100%; 
+    padding:10px; 
+    margin:8px; 
+    box-shadow: 1px 1px 1px 1px green;
+    background-color: aquamarine;
 }
 
 img{
@@ -29,9 +43,9 @@ img:hover{
 }
 
 #text {
-    text-align: justify;
+    text-align: bottom;
     word-wrap: break-word;
     width: 300px;
     height: 300px;
-    
+    margin-top: 10px;
 }
